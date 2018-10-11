@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if TimeCards %}
+<h1>CodeSchool TimeSheet</h1>
+<ul>
+    {% for Hours in TimeCards %}
+    <li>{{ Hours.name }}</li>
+    <li>{{ Hours.school }}</li>
+    <li>{{ Hours.subject }}</li>
+    <li>{{ Hours.hours }}</li>
+    <li>{{ Hours.dateOfWork }}</li>
+    <li>{{ Hours.dateOfEntry}}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
+</body>
+</html>
